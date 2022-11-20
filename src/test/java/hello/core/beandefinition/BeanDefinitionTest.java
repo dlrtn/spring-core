@@ -3,11 +3,13 @@ package hello.core.beandefinition;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class BeanDefinitionTest {
 
-    AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext();
+    //AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class); // Annotation으로 했을때
+    GenericXmlApplicationContext ac = new GenericXmlApplicationContext("appConfig.xml"); // XML로 했을때
+
 
     @Test
     @DisplayName("빈 설정 메타정보 확인")
