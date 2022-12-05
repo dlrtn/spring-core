@@ -18,7 +18,10 @@ public class AllBeanTest {
     void findAllBean() {
         ApplicationContext ac = new AnnotationConfigApplicationContext();
         DiscountService discountService = ac.getBean(DiscountService.class);
-        Member member = new Member(1L, "userA", Grade.VIP);
+        Member member = Member.builder()
+                .id(1L)
+                .grade(Grade.VIP)
+                .name("memberA").build();
 
         int discountPrice = discountService.discount(member, 10000, "fixDiscountPolicy");
         int rateDiscountPrice = discountService.discount(member, 10000, "rateDiscountPolicy");

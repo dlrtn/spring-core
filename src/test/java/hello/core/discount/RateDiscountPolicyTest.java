@@ -15,7 +15,10 @@ class RateDiscountPolicyTest {
     @DisplayName("VIP는 10% 할인이 적용되어야 한다.")
     void vip_o() {
         //given
-        Member member = new Member(1L, "memberVIP", Grade.VIP);
+        Member member = Member.builder()
+                .id(1L)
+                .grade(Grade.VIP)
+                .name("memberA").build();
 
         //when
         int discount = discountPolicy.discount(member, 10000);
@@ -28,7 +31,10 @@ class RateDiscountPolicyTest {
     @DisplayName("VIP가 아니면 할인이 적용되지 않아야 한다.")
     void vip_x() {
         //given
-        Member member = new Member(2L, "memberBASIC", Grade.BASIC);
+        Member member = Member.builder()
+                .id(1L)
+                .grade(Grade.VIP)
+                .name("memberA").build();
 
         //when
         int discount = discountPolicy.discount(member, 10000);

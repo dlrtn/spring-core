@@ -1,39 +1,18 @@
 package hello.core.member;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.ToString;
+
+@Builder(toBuilder = true)
+@Getter
+@ToString
 public class Member {
 
-    private Long id;
-    private String name;
-    private Grade grade;
+    private final Long id;
 
-    public Member(Long id, String name, Grade grade) {
-        this.id = id;
-        this.name = name;
-        this.grade = grade;
-    }
+    private final String name;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Grade getGrade() {
-        return grade;
-    }
-
-    public void setGrade(Grade grade) {
-        this.grade = grade;
-    }
+    private final Grade grade;
 
 }

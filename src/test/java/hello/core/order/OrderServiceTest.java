@@ -1,6 +1,6 @@
 package hello.core.order;
 
-import hello.core.AppConfig;
+//import hello.core.AppConfig;
 import hello.core.member.MemberService;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -11,9 +11,9 @@ class OrderServiceTest {
 
     @BeforeEach
     public void beforeEach() {
-        AppConfig appConfig = new AppConfig();
-        memberService = appConfig.memberService();
-        orderService = appConfig.orderService();
+        //AppConfig appConfig = new AppConfig();
+        //memberService = appConfig.memberService();
+        //orderService = appConfig.orderService();
     }
 
 }

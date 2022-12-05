@@ -1,6 +1,6 @@
 package hello.core.member;
 
-import hello.core.AppConfig;
+import hello.core.AutoAppConfig;
 import org.junit.jupiter.api.BeforeEach;
 
 class MemberServiceTest {
@@ -9,8 +9,8 @@ class MemberServiceTest {
 
     @BeforeEach
     public void beforeEach() {
-        AppConfig appConfig = new AppConfig();
-        memberService = appConfig.memberService();
+        AutoAppConfig appConfig = new AutoAppConfig();
+        //memberService = appConfig.memberService();
     }
 
 }
