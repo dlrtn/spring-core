@@ -1,6 +1,6 @@
 package hello.core.beanfind;
 
-import hello.core.AppConfig;
+import hello.core.AutoAppConfig;
 import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ApplicationContextBasicFindTest {
 
-    AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+    AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AutoAppConfig.class);
 
     @Test
     @DisplayName("빈 이름으로 조회")
